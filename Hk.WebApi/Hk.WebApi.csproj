@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hk.Core.Data\Hk.Core.Data.csproj" />
+    <ProjectReference Include="..\Hk.Core.Util\01.Hk.Core.Util.csproj" />
+    <ProjectReference Include="..\Hk.IServices\Hk.IServices.csproj" />
+    <ProjectReference Include="..\Hk.Models\Hk.Models.csproj" />
+    <ProjectReference Include="..\Hk.Services\Hk.Services.csproj" />
+  </ItemGroup>
+
+</Project>
