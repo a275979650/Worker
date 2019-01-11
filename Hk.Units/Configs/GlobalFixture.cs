@@ -43,7 +43,7 @@ namespace Hk.Units.Configs
                 //    "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP) (HOST=121.41.14.20)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=testorcl)));Persist Security Info=True;User ID=HkGuide;Password=HkGuide;";
                 options.ModelAssemblyName = "Hk.Core.Entity";
             });
-            services.AddTransientAssembly("Hk.IServices", "Hk.Services");
+
             services.AddTransient<IDbContextCore, SqlServerDbContext>(); //注入上下文
             //services.AddScoped<IDbContextCore, OracleDbContext>(); //注入上下文
             //services.AddScoped<IDbContextCore, MySqlDbContext>(); //注入上下文
