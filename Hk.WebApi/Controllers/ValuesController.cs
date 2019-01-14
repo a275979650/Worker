@@ -14,8 +14,8 @@ namespace Hk.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private ITestService _testService;
-        public ValuesController(ITestService testService)
+        private ITestService<Student> _testService;
+        public ValuesController(ITestService<Student> testService)
         {
             _testService = testService;
         }
@@ -35,7 +35,7 @@ namespace Hk.WebApi.Controllers
             //var table= _testService.GetDataTable(
             //    "SELECT * FROM PEIS_PERSON_ASSESS WHERE PERSON_HOS_NO =\'1901070001\' AND ASSESS_KEY=\'0000009\'");
             //return Ok(table.Rows.Count);
-            var s = _testService.GetList<Student>();
+            var s = _testService.GetList();
             return Ok(s.ToJson());
         }
 

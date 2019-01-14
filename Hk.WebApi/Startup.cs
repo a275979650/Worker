@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Hk.WebApi
 {
@@ -43,6 +44,7 @@ namespace Hk.WebApi
             //services.AddTransient(typeof(IDbContextCore), typeof(BaseDbContext));
             services.AddTransient<IDbContextCore, SqlServerDbContext>();
             services.AddTransientAssembly("Hk.IServices", "Hk.Services");
+            services.AddSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +55,8 @@ namespace Hk.WebApi
                 app.UseDeveloperExceptionPage();
             }          
             app.UseMvc();
+            //启用swagger
+            app.UseSwaggerEx();
         }
     }
 }
