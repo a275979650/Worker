@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using Hk.Core.Data.DbContextCore;
 using Hk.Core.Data.DbContextCore.DbTypeContext;
+using Hk.Core.Logs.Extensions;
 using Hk.Core.Util.Extentions;
 
 namespace Hk.Units.Configs
@@ -45,8 +46,9 @@ namespace Hk.Units.Configs
             });
 
             services.AddTransient<IDbContextCore, SqlServerDbContext>(); //注入上下文
-            //services.AddScoped<IDbContextCore, OracleDbContext>(); //注入上下文
+                                                                         //services.AddScoped<IDbContextCore, OracleDbContext>(); //注入上下文
             //services.AddScoped<IDbContextCore, MySqlDbContext>(); //注入上下文
+            services.AddNLog();
             return services;
         }
     }

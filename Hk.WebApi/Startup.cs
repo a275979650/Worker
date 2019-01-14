@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Hk.Core.Data.DbContextCore;
 using Hk.Core.Data.DbContextCore.DbTypeContext;
 using Hk.Core.Data.Options;
+using Hk.Core.Logs.Extensions;
 using Hk.Core.Util.Extentions;
 using Hk.IServices;
 using Hk.Services;
@@ -45,6 +46,7 @@ namespace Hk.WebApi
             services.AddTransient<IDbContextCore, SqlServerDbContext>();
             services.AddTransientAssembly("Hk.IServices", "Hk.Services");
             services.AddSwagger();
+            services.AddNLog();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

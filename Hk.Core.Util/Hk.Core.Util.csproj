@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Extentions\Extensions.Expression.cs" />
     <Compile Remove="Extentions\Extention.Expression.cs" />
     <Compile Remove="Json.cs" />

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hk.Core.Util\01.Hk.Core.Util.csproj" />
+    <ProjectReference Include="..\Hk.Core.Util\Hk.Core.Util.csproj" />
   </ItemGroup>
 
   <ItemGroup>

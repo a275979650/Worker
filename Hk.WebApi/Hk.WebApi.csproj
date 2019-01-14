@@ -19,10 +19,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hk.Core.Data\Hk.Core.Data.csproj" />
-    <ProjectReference Include="..\Hk.Core.Util\01.Hk.Core.Util.csproj" />
+    <ProjectReference Include="..\Hk.Core.Logs\Hk.Core.Logs.csproj" />
+    <ProjectReference Include="..\Hk.Core.Util\Hk.Core.Util.csproj" />
     <ProjectReference Include="..\Hk.IServices\Hk.IServices.csproj" />
     <ProjectReference Include="..\Hk.Models\Hk.Models.csproj" />
     <ProjectReference Include="..\Hk.Services\Hk.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

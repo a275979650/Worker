@@ -28,17 +28,17 @@ namespace Hk.Core.Util.Extentions
                     //    Contact = new Contact() { Name = "Talking Dotnet", Email = "275979650@qq.com", Url = "www.chendong.com" }
                     //});
                     // Define the OAuth2.0 scheme that's in use (i.e. Implicit Flow)
-                    c.AddSecurityDefinition("oauth2", new OAuth2Scheme
-                    {
-                        Type = "oauth2",
-                        Flow = "implicit",
-                        AuthorizationUrl = "http://petstore.swagger.io/oauth/dialog",
-                        Scopes = new Dictionary<string, string>
-                        {
-                            { "readAccess", "Access read operations" },
-                            { "writeAccess", "Access write operations" }
-                        }
-                    });
+                    //c.AddSecurityDefinition("oauth2", new OAuth2Scheme
+                    //{
+                    //    Type = "oauth2",
+                    //    Flow = "implicit",
+                    //    AuthorizationUrl = "http://petstore.swagger.io/oauth/dialog",
+                    //    Scopes = new Dictionary<string, string>
+                    //    {
+                    //        { "readAccess", "Access read operations" },
+                    //        { "writeAccess", "Access write operations" }
+                    //    }
+                    //});
 
 
                     var basePath = PlatformServices.Default.Application.ApplicationBasePath;
@@ -56,13 +56,13 @@ namespace Hk.Core.Util.Extentions
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hk.WebApis v1");
                 //c.SwaggerEndpoint("/swagger/v2/swagger.json", "Hk.WebApis v2");
-                c.OAuthClientId("test-id");
-                c.OAuthClientSecret("test-secret");
-                c.OAuthRealm("test-realm");
-                c.OAuthAppName("test-app");
-                c.OAuthScopeSeparator(" ");
-                c.OAuthAdditionalQueryStringParams(new Dictionary<string, string> { { "foo", "bar" } });
-                c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
+                //c.OAuthClientId("test-id");
+                //c.OAuthClientSecret("test-secret");
+                //c.OAuthRealm("test-realm");
+                //c.OAuthAppName("test-app");
+                //c.OAuthScopeSeparator(" ");
+                //c.OAuthAdditionalQueryStringParams(new Dictionary<string, string> { { "foo", "bar" } });
+                //c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
             });
         }
     }
