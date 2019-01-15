@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EasyCaching.InMemory;
+using Hk.Core.Cache;
+using Hk.Core.Cache.Extentions;
 using Hk.Core.Data.DbContextCore;
 using Hk.Core.Data.DbContextCore.DbTypeContext;
 using Hk.Core.Data.Options;
@@ -47,6 +50,8 @@ namespace Hk.WebApi
             services.AddTransientAssembly("Hk.IServices", "Hk.Services");
             services.AddSwagger();
             services.AddNLog();
+            //注册EasyCaching缓存
+            services.AddEasyCachingForUtil(options=>options.UseInMemory());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

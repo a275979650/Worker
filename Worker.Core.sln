@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hk.Core.Logs", "Hk.Core.Log
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hk.Core.Security", "Hk.Core.Security\Hk.Core.Security.csproj", "{21B16B6B-8788-4F52-809D-1FD5D34EAA16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hk.Core.Cache", "Hk.Core.Cache\Hk.Core.Cache.csproj", "{D7B8887A-AA86-4001-B2C3-F71D05F4E6FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{21B16B6B-8788-4F52-809D-1FD5D34EAA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21B16B6B-8788-4F52-809D-1FD5D34EAA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21B16B6B-8788-4F52-809D-1FD5D34EAA16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B8887A-AA86-4001-B2C3-F71D05F4E6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B8887A-AA86-4001-B2C3-F71D05F4E6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B8887A-AA86-4001-B2C3-F71D05F4E6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B8887A-AA86-4001-B2C3-F71D05F4E6FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

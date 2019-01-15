@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Hk.Core.Cache\Hk.Core.Cache.csproj" />
     <ProjectReference Include="..\Hk.Core.Data\Hk.Core.Data.csproj" />
     <ProjectReference Include="..\Hk.Core.Logs\Hk.Core.Logs.csproj" />
     <ProjectReference Include="..\Hk.Core.Util\Hk.Core.Util.csproj" />
