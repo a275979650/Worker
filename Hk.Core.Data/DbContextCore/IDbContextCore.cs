@@ -15,32 +15,41 @@ namespace Hk.Core.Data.DbContextCore
         bool Insert<T>(T insertObj) where T : class, new();
         int InsertReturnIdentity<T>(T insertObj) where T : class, new();
         bool InsertRange<T>(List<T> insertObjs) where T : class, new();
+
         #endregion
+
         #region 删除
 
         bool DeleteById<T>(object id) where T : class, new();
         bool Delete<T>(T deleteObj) where T : class, new();
         bool Delete<T>(Expression<Func<T, bool>> whereExpression) where T : class, new();
         bool DeleteByIds<T>(object[] ids) where T : class, new();
+
         #endregion
-            #region 更新
+
+        #region 更新
 
         bool Update<T>(T updateObj) where T : class, new();
         bool UpdateRange<T>(List<T> updateObjs) where T : class, new();
+
         bool Update<T>(Expression<Func<T, T>> columns, Expression<Func<T, bool>> whereExpression)
             where T : class, new();
 
         #endregion
+
         #region 查询
 
         T GetById<T>(object id) where T : class, new();
 
-       List<T> GetList<T>() where T : class, new();
+        List<T> GetList<T>() where T : class, new();
         List<T> GetList<T>(Expression<Func<T, bool>> whereExpression = null) where T : class, new();
+
         List<T> GetPageList<T>(PageModel page, Expression<Func<T, bool>> whereExpression = null,
             Expression<Func<T, object>> orderByExpression = null, OrderByType orderByType = OrderByType.Asc)
             where T : class, new();
+
         T GetSingleOrDefault<T>(Expression<Func<T, bool>> whereExpression) where T : class, new();
+
         #endregion
 
         #region DataTable

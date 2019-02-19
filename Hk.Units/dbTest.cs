@@ -87,5 +87,16 @@ namespace Hk.Units
             Assert.True(_dbContext.DeleteByIds<Student>(students.ToArray()));
             _output.WriteLine("已删除所有记录");
         }
+        [Fact]
+        public void TestMysql()
+        {
+            DataTable data =  _dbContext.GetDataTable("SELECT * FROM activity_info ");
+            data.Rows.Cast<DataRow>().ForEach(x =>
+            {
+                _output.WriteLine(x["activity_id_no"].ToString());
+                _output.WriteLine(x["activity_name"].ToString());
+                _output.WriteLine(x["summary"].ToString());
+            });
+        }
     }
 }

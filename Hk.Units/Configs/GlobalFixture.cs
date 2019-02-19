@@ -38,16 +38,18 @@ namespace Hk.Units.Configs
             services.Configure<DbContextOption>(options =>
             {
                 options.ConnectionString =
-                    "Data Source=192.168.1.33;Initial Catalog=Hk.Core.Framework.DB;Persist Security Info=True;User ID=sa;Password=Huakang1949;MultipleActiveResultSets=True;";
+                    "Data Source=192.168.1.202;Initial Catalog=health_manager;port=3306;user id=root;password=mhealth365;charset=utf8";
+                //options.ConnectionString =
+                //    "Data Source=192.168.1.33;Initial Catalog=Hk.Core.Framework.DB;Persist Security Info=True;User ID=sa;Password=Huakang1949;MultipleActiveResultSets=True;";
 
                 //options.ConnectionString =
                 //    "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP) (HOST=121.41.14.20)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=testorcl)));Persist Security Info=True;User ID=HkGuide;Password=HkGuide;";
-                options.ModelAssemblyName = "Hk.Core.Entity";
+                //options.ModelAssemblyName = "Hk.Core.Entity";
             });
 
-            services.AddTransient<IDbContextCore, SqlServerDbContext>(); //注入上下文
+            //services.AddTransient<IDbContextCore, SqlServerDbContext>(); //注入上下文
                                                                          //services.AddScoped<IDbContextCore, OracleDbContext>(); //注入上下文
-            //services.AddScoped<IDbContextCore, MySqlDbContext>(); //注入上下文
+            services.AddScoped<IDbContextCore, MySqlDbContext>(); //注入上下文
             services.AddNLog();
             return services;
         }
